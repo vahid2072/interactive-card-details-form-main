@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <section class="bg-image">
+        <img class="card-back" src="./images/bg-card-back.png" />
+        <div class="card-back-text">000</div>
+        <img class="card-front" src="./images/bg-card-front.png" />
+        <div class="card-front-text">
+          <span class="dot"></span>
+          <span class="empty-dot"></span>
+        </div>
+        <span class="card-number">0000 0000 0000 0000</span>
+        <span class="user-name">JANE APPLESEED</span>
+        <span class="date"><span class="date-month">00</span>/<span class="date-year">00</span></span>
+      </section>
+      <form action="#" id="form">
+        <div class="hide-form">
+          <label for="name">CARDHOLDER NAME</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="e.g. Jane Appleseed"
+            maxlength="30"
+          /><br />
+          <span class="error user-name-error">Wrong format, numbers only</span>
+          <label for="number">CARD NUMBER</label><br />
+          <input
+            type="text"
+            id="number"
+            name="number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+          /><br />
+          <span class="error card-number-error">Wrong format, numbers only</span
+          ><br />
+          <label for="exp-date-month">EXP. DATE</label>
+          <label for="exp-date-year">(MM/YY)</label>
+          <label for="cvc-number">CVC</label><br />
+          <input
+            type="text"
+            class="small-input"
+            id="exp-date-month"
+            name="exp-date-month"
+            placeholder="MM"
+            maxlength="2"
+          />
+          <input
+            type="text"
+            class="small-input"
+            id="exp-date-year"
+            name="exp-date-year"
+            placeholder="YY"
+            maxlength="2"
+          />
+          <input
+            type="text"
+            class="half-input"
+            id="cvc-number"
+            name="cvc-number"
+            placeholder="e.g. 123"
+            maxlength="3"
+          /><br />
+            <div class="flex-message">
+              <span class="error date-error">Can't be blank</span>
+              <span class="error date-year-error">Can't be blank</span>
+              <span class="error cvc-error">Can't be blank / format invalid</span>
+            </div>
+        </div>
+        <div class="succesful-sumbit">
+          <div class="icon-complete"></div>
+          <h1>THANK YOU!</h1>
+          <p class="added-card">We've added your card details</p>
+        </div>
+        <button class="submit-btn">Confirm</button>
+      </form>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.linkedin.com/in/vahid-khani-12937426a/"
+        target="_blank"
+        >Vahid Khani</a
+      >.
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
